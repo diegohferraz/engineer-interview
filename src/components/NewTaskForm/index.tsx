@@ -13,20 +13,33 @@ const NewTaskForm = ({ onAddNewTask }: NewTaskFormProps) => {
   const handleFormSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
 
+    const trimmedTitle = taskTitle.trim();
+    if (trimmedTitle.length === 0) {
+      setTaskTitle("");
+      return;
+    }
+
     onAddNewTask(taskTitle);
     setTaskTitle("");
   };
 
   return (
     <form className={styles.wrapper} onSubmit={handleFormSubmit}>
-      <h3 className={styles.heading}>Add a new task to the list:</h3>
+      <label htmlFor="titleIpt" className={styles.heading}>
+        Add a new task to the list:
+      </label>
       <input
         placeholder="Task title"
+        id="titleIpt"
         className={styles.input}
         value={taskTitle}
         onChange={(e) => setTaskTitle(e.target.value)}
       />
-      <button className={styles.btn} disabled={taskTitle.length === 0}>
+      <button
+        aria-label="Add new task to todo list"
+        className={styles.btn}
+        disabled={taskTitle.length === 0}
+      >
         <FiPlus color="#fff" size={20} />
       </button>
     </form>

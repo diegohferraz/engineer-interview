@@ -17,7 +17,7 @@ function App() {
       ...tasks,
       {
         id: crypto.randomUUID(),
-        title,
+        title: title.trim(),
         status: "todo",
       },
     ]);

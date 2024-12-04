@@ -19,6 +19,7 @@ const TaskItem = ({
 }: TaskItemProps) => (
   <div className={styles.item}>
     <button
+      aria-label="Move to previous column"
       className={`${styles.btn} ${styles.prev}`}
       disabled={isPrevDisabled}
       onClick={onMovePrev}
@@ -27,6 +28,7 @@ const TaskItem = ({
     </button>
     <p>{title}</p>
     <button
+      aria-label="Move to next column"
       className={`${styles.btn} ${styles.next}`}
       disabled={isNextDisabled}
       onClick={onMoveNext}
