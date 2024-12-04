@@ -11,12 +11,7 @@ type ToDoListProps = {
   onMovePrev: (task: Task) => void;
 };
 
-const ToDoList = ({
-  title,
-  tasks = [],
-  onMoveNext,
-  onMovePrev,
-}: ToDoListProps) => (
+const ToDoList = ({ title, tasks, onMoveNext, onMovePrev }: ToDoListProps) => (
   <div className={styles.column}>
     <h2 className={styles.title}>{title}</h2>
     {tasks.map((task) => (
