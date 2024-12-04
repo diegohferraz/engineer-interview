@@ -37,6 +37,7 @@ const NewTaskForm = ({ onAddNewTask }: NewTaskFormProps) => {
       />
       <button
         aria-label="Add new task to todo list"
+        data-testid="addNewBtn"
         className={styles.btn}
         disabled={taskTitle.length === 0}
       >
