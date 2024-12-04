@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+:root {
+  --snow: #fbfbfb;
+  --white-smoke: #f4f4f4;
+  --light-gray: #ccc;
+  --flamingo: #eb5353;
+  --cerulean: #187498;
+  --sea-green: #36ae7c;
+
+  --border-radius: 16px;
+  --border-radius-sm: 4px;
+}
+
 *,
 *::before,
 *::after {
@@ -14,6 +26,7 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--snow);
 }
 
 input,
