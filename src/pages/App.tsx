@@ -2,6 +2,7 @@ import styles from "./App.module.css";
 
 import Header from "../components/Header";
 import ToDoList from "../components/ToDoList";
+import NewTaskForm from "../components/NewTaskForm";
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
         <ToDoList title="In Progress" />
         <ToDoList title="Done" />
       </main>
-      <div>
-        <h1>form</h1>
-      </div>
+      <NewTaskForm />
     </div>
   );
 }
