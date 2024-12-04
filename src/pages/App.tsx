@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ChallengeComponent } from "./ChallengeComponent";
+import { ChallengeComponent } from "../components/ChallengeComponent";
 
 import styles from "./App.module.css";
 
