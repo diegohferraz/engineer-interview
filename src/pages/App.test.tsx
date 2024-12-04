@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-const crypto = require("crypto");
+import crypto from "crypto";
 
 Object.defineProperty(globalThis, "crypto", {
   value: {
