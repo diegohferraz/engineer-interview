@@ -7,9 +7,11 @@ import { Task } from "../../types";
 type ToDoListProps = {
   title: string;
   tasks: Task[];
+  onMoveNext: (task: Task) => void;
+  onMovePrev: (task: Task) => void;
 };
 
-const ToDoList = ({ title, tasks }: ToDoListProps) => (
+const ToDoList = ({ title, tasks, onMoveNext, onMovePrev }: ToDoListProps) => (
   <div className={styles.column}>
     <h2 className={styles.title}>{title}</h2>
     {tasks.map((task) => (
@@ -18,6 +20,8 @@ const ToDoList = ({ title, tasks }: ToDoListProps) => (
         title={task.title}
         isPrevDisabled={task.status === "todo"}
         isNextDisabled={task.status === "done"}
+        onMoveNext={() => onMoveNext(task)}
+        onMovePrev={() => onMovePrev(task)}
       />
     ))}
   </div>

@@ -4,6 +4,7 @@
   display: flex;
   padding: 12px;
   justify-content: space-between;
+  gap: 8px;
   border: 1px solid #ccc;
   border-radius: var(--border-radius-sm);
 }
@@ -28,9 +29,9 @@
 }
 
 .next {
-  background-color: var(--flamingo);
+  background-color: var(--sea-green);
 }
 
 .prev {
-  background-color: var(--sea-green);
+  background-color: var(--flamingo);
 }
