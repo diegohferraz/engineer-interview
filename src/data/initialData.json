@@ -1,0 +1,17 @@
+[
+  {
+    "id": "task1",
+    "title": "Mow The lawn",
+    "status": "todo"
+  },
+  {
+    "id": "task2",
+    "title": "Pull Weeds",
+    "status": "progress"
+  },
+  {
+    "id": "task3",
+    "title": "Rake the leaves",
+    "status": "done"
+  }
+]
