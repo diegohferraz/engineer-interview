@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { GroupedTasks, Task } from "../types";
+import { generateID } from "../utils";
 import initialData from "../data/initialData.json";
 
 import styles from "./App.module.css";
@@ -16,7 +17,7 @@ function App() {
     setTasks([
       ...tasks,
       {
-        id: crypto.randomUUID(),
+        id: generateID(),
         title: title.trim(),
         status: "todo",
       },
